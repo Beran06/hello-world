@@ -1,18 +1,317 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="tr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hoca Namık — Din Kültürü ve Ahlak Bilgisi özel ders. LGS, YKS ve okul derslerine hazırlık. Birebir, online ve yüz yüze özel ders.">
+  <title>Hoca Namık | Din Kültürü Özel Ders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header class="header" id="ust">
+    <nav class="nav container">
+      <a href="#ust" class="logo">
+        <span class="logo-icon" aria-hidden="true">📖</span>
+        <span class="logo-text">Hoca Namık</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#konular">Konular</a></li>
+        <li><a href="#neden">Neden Ben?</a></li>
+        <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-badge">Din Kültürü ve Ahlak Bilgisi Öğretmeni</p>
+          <h1>Din Kültürü'nde <span class="highlight">başarıya</span> birlikte ulaşalım</h1>
+          <p class="hero-desc">
+            Merhaba, ben Hoca Namık. Yılların tecrübesiyle LGS, YKS ve okul derslerine
+            birebir özel ders veriyorum. Konuları sade, anlaşılır ve kalıcı şekilde öğretiyorum.
+          </p>
+          <div class="hero-actions">
+            <a href="#iletisim" class="btn btn-primary">Ücretsiz Tanışma Görüşmesi</a>
+            <a href="#hizmetler" class="btn btn-outline">Hizmetleri İncele</a>
+          </div>
+          <ul class="hero-stats">
+            <li>
+              <strong>15+</strong>
+              <span>Yıl Deneyim</span>
+            </li>
+            <li>
+              <strong>500+</strong>
+              <span>Öğrenci</span>
+            </li>
+            <li>
+              <strong>%95</strong>
+              <span>Memnuniyet</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="teacher-avatar" aria-hidden="true">
+              <span>HN</span>
+            </div>
+            <h2>Hoca Namık</h2>
+            <p class="teacher-title">Din Kültürü ve Ahlak Bilgisi Öğretmeni</p>
+            <ul class="teacher-tags">
+              <li>LGS Hazırlık</li>
+              <li>YKS Hazırlık</li>
+              <li>Online Ders</li>
+              <li>Yüz Yüze Ders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+    <section class="section" id="hakkimda">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="section-label">Hakkımda</p>
+          <h2>Eğitimde sabır, bilgide derinlik</h2>
+          <p>
+            Din Kültürü ve Ahlak Bilgisi alanında uzman bir öğretmen olarak öğrencilerimin
+            sadece sınavlarda değil, hayat boyu taşıyacakları bir bilgi ve değer birikimi
+            edinmelerine odaklanıyorum.
+          </p>
+          <p>
+            Her öğrencinin öğrenme hızı ve ihtiyacı farklıdır. Bu nedenle derslerimi
+            kişiye özel planlıyor, zorlandığı konuları tekrar ediyor ve güçlü yönlerini
+            pekiştiriyorum.
+          </p>
+          <ul class="about-features">
+            <li>
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              MEB müfredatına tam uyumlu içerik
+            </li>
+            <li>
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              Soru çözüm teknikleri ve deneme analizi
+            </li>
+            <li>
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              Veli bilgilendirme ve düzenli geri bildirim
+            </li>
+          </ul>
+        </div>
+        <div class="about-cards">
+          <article class="info-card">
+            <h3>Eğitim</h3>
+            <p>İlahiyat ve Pedagojik Formasyon</p>
+          </article>
+          <article class="info-card">
+            <h3>Uzmanlık</h3>
+            <p>Ortaokul & Lise Din Kültürü</p>
+          </article>
+          <article class="info-card">
+            <h3>Ders Şekli</h3>
+            <p>Online & Yüz Yüze</p>
+          </article>
+          <article class="info-card accent">
+            <h3>İlk Görüşme</h3>
+            <p>Ücretsiz seviye tespiti ve planlama</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section-alt" id="hizmetler">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Hizmetler</p>
+          <h2>Size uygun özel ders programı</h2>
+          <p class="section-desc">Her seviye ve hedefe göre özelleştirilmiş ders planları sunuyorum.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🎯</div>
+            <h3>LGS Hazırlık</h3>
+            <p>8. sınıf öğrencileri için müfredat odaklı, soru tiplerine hakimiyet sağlayan yoğun hazırlık programı.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📚</div>
+            <h3>YKS Hazırlık</h3>
+            <p>TYT ve AYT Din Kültürü konularında kapsamlı tekrar, deneme çözümü ve eksik konu tamamlama.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏫</div>
+            <h3>Okul Desteği</h3>
+            <p>5–12. sınıf öğrencileri için dönem içi konu takibi, ödev desteği ve sınav hazırlığı.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">💻</div>
+            <h3>Online Ders</h3>
+            <p>Evden rahatça katılın. İnteraktif dersler, dijital materyaller ve kayıt imkânı.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="konular">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Konular</p>
+          <h2>İşlediğimiz ana başlıklar</h2>
+        </div>
+        <div class="topics-grid">
+          <div class="topic-item">İnanç Esasları</div>
+          <div class="topic-item">İbadetler</div>
+          <div class="topic-item">Hz. Muhammed'in Hayatı</div>
+          <div class="topic-item">Kur'an-ı Kerim ve Yorumu</div>
+          <div class="topic-item">Ahlaki Değerler</div>
+          <div class="topic-item">Din ve Hayat</div>
+          <div class="topic-item">İslam Tarihi</div>
+          <div class="topic-item">Dinler ve Evrensel Değerler</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="neden">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Neden Ben?</p>
+          <h2>Öğrencilerimin beni tercih etme sebepleri</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="why-number">01</span>
+            <h3>Anlaşılır Öğretim</h3>
+            <p>Karmaşık konuları günlük hayattan örneklerle sadeleştiriyorum.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-number">02</span>
+            <h3>Kişiye Özel Plan</h3>
+            <p>Her öğrenci için ayrı çalışma programı ve hedef belirleme.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-number">03</span>
+            <h3>Sınav Odaklı</h3>
+            <p>LGS ve YKS soru kalıplarına hakim, pratik çözüm yöntemleri.</p>
+          </article>
+          <article class="why-card">
+            <span class="why-number">04</span>
+            <h3>Esnek Program</h3>
+            <p>Hafta içi ve hafta sonu, online veya yüz yüze ders seçenekleri.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Veli & Öğrenci Görüşleri</p>
+          <h2>Başarı hikâyeleri</h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>"Oğlum LGS'de Din Kültürü'nden tam puan aldı. Hoca Namık'ın sabırlı ve sistematik öğretimi sayesinde konulara olan ilgisi de arttı."</p>
+            <footer>— Ayşe H., Veli</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"YKS'ye hazırlanırken eksik konularımı çok hızlı kapattım. Dersler hem verimli hem de keyifli geçiyor."</p>
+            <footer>— Mehmet K., 12. Sınıf</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"Online dersler çok düzenli ve profesyonel. Materyaller ve ödev takibi mükemmel."</p>
+            <footer>— Fatma D., Veli</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="iletisim">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="section-label">İletişim</p>
+          <h2>Hemen iletişime geçin</h2>
+          <p>Ücretsiz tanışma görüşmesi için formu doldurun veya doğrudan WhatsApp üzerinden yazın.</p>
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon" aria-hidden="true">📱</span>
+              <div>
+                <strong>Telefon / WhatsApp</strong>
+                <a href="https://wa.me/905551234567">+90 555 123 45 67</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>E-posta</strong>
+                <a href="mailto:hocanamik@example.com">hocanamik@example.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Konum</strong>
+                <span>İstanbul & Online (Türkiye geneli)</span>
+              </div>
+            </li>
+          </ul>
+          <a href="https://wa.me/905551234567?text=Merhaba%20Hoca%20Namık%2C%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            WhatsApp ile Yazın
+          </a>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>Mesaj Gönderin</h3>
+          <div class="form-group">
+            <label for="name">Ad Soyad</label>
+            <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required placeholder="05XX XXX XX XX">
+          </div>
+          <div class="form-group">
+            <label for="grade">Sınıf / Hedef</label>
+            <select id="grade" name="grade" required>
+              <option value="">Seçiniz</option>
+              <option value="5-7">5–7. Sınıf</option>
+              <option value="8-lgs">8. Sınıf (LGS)</option>
+              <option value="9-11">9–11. Sınıf</option>
+              <option value="12-yks">12. Sınıf (YKS)</option>
+              <option value="diger">Diğer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" rows="4" placeholder="Hangi konularda destek almak istiyorsunuz?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Gönder</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon" aria-hidden="true">📖</span>
+        <span>Hoca Namık</span>
+      </div>
+      <p>Din Kültürü ve Ahlak Bilgisi Özel Ders</p>
+      <p class="footer-copy">&copy; 2026 Hoca Namık. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
