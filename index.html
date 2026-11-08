@@ -1,18 +1,74 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="tr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000011">
+  <title>Galaxy Rush 🚀</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+    <!-- HUD (in-game overlay) -->
+    <div id="hud" class="hidden">
+      <div class="hud-col">
+        <span class="hud-label">SKOR</span>
+        <span class="hud-val" id="score">0</span>
+      </div>
+      <div class="hud-col center">
+        <span class="hud-label">DALGA</span>
+        <span class="hud-val" id="wave">1</span>
+      </div>
+      <div class="hud-col right">
+        <span id="lives">❤️❤️❤️</span>
+        <button id="pause-btn" aria-label="Duraklat">⏸</button>
+      </div>
+    </div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+    <!-- Main Menu -->
+    <div id="menu-screen" class="screen">
+      <div class="card">
+        <span class="logo">🚀</span>
+        <h1>GALAXY RUSH</h1>
+        <p class="subtitle">Uzay Savunma Oyunu</p>
+        <button id="start-btn" class="btn-p">▶ OYNA</button>
+        <div class="how-to">
+          <p>📱 Ekrana dokun ve sürükle → gemiyi hareket ettir</p>
+          <p>🔫 Otomatik ateş | 💥 Düşmanları vur</p>
+          <p>⚡ Güç-ups topla | 🌊 Her dalga zorlaşır</p>
+        </div>
+        <div class="hs-row">🏆 Rekor: <span id="high-score">0</span></div>
+      </div>
+    </div>
 
+    <!-- Game Over -->
+    <div id="gameover-screen" class="screen hidden">
+      <div class="card">
+        <h2 class="go-title">OYUN BİTTİ</h2>
+        <div class="score-block">
+          <div>Skorun: <strong id="final-score">0</strong></div>
+          <div>Rekor: <strong id="best-score">0</strong></div>
+        </div>
+        <button id="restart-btn" class="btn-p">▶ TEKRAR OYNA</button>
+        <button id="menu-btn" class="btn-s">ANA MENÜ</button>
+      </div>
+    </div>
+
+    <!-- Pause -->
+    <div id="pause-screen" class="screen hidden">
+      <div class="card">
+        <span class="logo" style="font-size:50px">⏸</span>
+        <h2>DURAKLANDI</h2>
+        <button id="resume-btn" class="btn-p">▶ DEVAM ET</button>
+        <button id="quit-btn" class="btn-s">ANA MENÜ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
 </body>
 </html>

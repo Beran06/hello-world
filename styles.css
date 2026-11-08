@@ -1,17 +1,138 @@
-* {
-  margin:0px;
-  padding:0px;
+/* ═══════════════════════════════════════════
+   GALAXY RUSH – Mobile Game Styles
+   ═══════════════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;touch-action:none}
+
+html,body{
+  width:100%;height:100%;overflow:hidden;
+  background:#000011;
+  font-family:'Courier New',Courier,monospace;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+/* ── Game Container & Canvas ── */
+#game-container{position:relative;margin:0 auto;overflow:hidden}
+#gameCanvas{display:block;position:absolute;inset:0}
+
+/* ── HUD ── */
+#hud{
+  position:absolute;top:0;left:0;right:0;
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding:10px 14px 8px;
+  pointer-events:none;
+  z-index:10;
+}
+#hud.hidden{display:none}
+.hud-col{display:flex;flex-direction:column;gap:1px}
+.hud-col.center{align-items:center}
+.hud-col.right{align-items:flex-end;gap:5px;pointer-events:auto}
+.hud-label{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.35);text-transform:uppercase}
+.hud-val{font-size:22px;font-weight:bold;color:#fff;text-shadow:0 0 12px #00e5ff;line-height:1.1}
+#lives{font-size:14px;line-height:1}
+
+/* Pause button (inside hud-right, needs pointer-events) */
+#pause-btn{
+  pointer-events:auto;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.75);
+  width:36px;height:36px;border-radius:50%;
+  font-size:14px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+#pause-btn:active{background:rgba(255,255,255,0.22)}
+
+/* ── Overlay Screens ── */
+.screen{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  z-index:20;
+}
+.screen.hidden{display:none}
+
+/* ── Card ── */
+.card{
+  background:rgba(0,6,24,0.92);
+  border:1px solid rgba(60,120,255,0.22);
+  border-radius:26px;
+  padding:34px 28px;
+  text-align:center;
+  width:min(310px,90vw);
+  box-shadow:
+    0 0 60px rgba(0,60,255,0.18),
+    0 0 140px rgba(0,0,0,0.65),
+    inset 0 0 40px rgba(0,0,0,0.5);
+  backdrop-filter:blur(14px);
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+/* Logo emoji */
+.logo{
+  font-size:68px;
+  display:block;
+  margin-bottom:6px;
+  animation:fl 2.2s ease-in-out infinite;
 }
+@keyframes fl{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-13px) rotate(3deg)}
+}
+
+/* Headings */
+h1{
+  font-size:30px;font-weight:900;letter-spacing:5px;
+  background:linear-gradient(135deg,#00ffff 0%,#4488ff 50%,#cc44ff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:5px;
+}
+h2{font-size:24px;letter-spacing:3px;color:#fff;margin-bottom:18px}
+.go-title{color:#ff3333;text-shadow:0 0 24px rgba(255,0,0,0.5);margin-bottom:18px}
+
+.subtitle{
+  font-size:11px;color:rgba(255,255,255,0.35);
+  letter-spacing:3px;margin-bottom:22px;
+}
+
+/* How-to block */
+.how-to{
+  background:rgba(0,100,255,0.07);
+  border:1px solid rgba(0,100,255,0.15);
+  border-radius:12px;
+  padding:12px 14px;
+  margin:16px 0;
+  text-align:left;
+}
+.how-to p{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.9;letter-spacing:.5px}
+
+/* Score block (game-over) */
+.score-block{font-size:14px;color:rgba(255,255,255,0.5);line-height:2.4;margin-bottom:22px}
+.score-block strong{color:#fff;font-size:20px;text-shadow:0 0 12px #ffee00;font-weight:bold}
+
+/* High score row */
+.hs-row{margin-top:16px;font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:1px}
+.hs-row span{color:#ffee00;font-weight:bold}
+
+/* ── Buttons ── */
+.btn-p{
+  display:block;width:100%;padding:15px 0;margin:8px 0;
+  background:linear-gradient(135deg,#0055ff,#002299);
+  color:#fff;border:none;border-radius:50px;
+  font-family:'Courier New',Courier,monospace;
+  font-size:16px;font-weight:bold;letter-spacing:3px;
+  cursor:pointer;
+  box-shadow:0 4px 22px rgba(0,80,255,0.4);
+  transition:transform .1s,opacity .1s;
+}
+.btn-p:active{transform:scale(0.96);opacity:.85}
+
+.btn-s{
+  display:block;width:100%;padding:13px 0;margin:8px 0;
+  background:transparent;
+  color:rgba(255,255,255,0.4);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:50px;
+  font-family:'Courier New',Courier,monospace;
+  font-size:14px;letter-spacing:2px;
+  cursor:pointer;transition:background .12s;
+}
+.btn-s:active{background:rgba(255,255,255,0.08)}
